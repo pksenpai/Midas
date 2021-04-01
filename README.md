@@ -123,22 +123,6 @@ opt_func = torch.optim.Adam,
 
 result: Epoch [1], last_lr: 0.00095, train_loss: 2.3174, val_loss: 3.5638, val_acc: 0.0017
 
-#### Midas_C
-classifier trained on custom MNIST Dataset and tested on the validation set from part B (using pretrained architecture)
-
-transforms: resized to 32 x 32 x 3 converted to tensor and grayscaled to ouput 1 as third channel
-
-validation size = 3000, train size = default custom MNIST size
-
-batch size = 256,
-epochs = 5,
-max_lr = 0.001,
-grad_clip = 1,
-weight_decay = 1e-6,
-opt_func = torch.optim.Adam,
-
-result: Epoch [1], last_lr: 0.00095, train_loss: 2.3174, val_loss: 3.5638, val_acc: 0.0017
-
 #### Midas_C.1
 classifier trained on custom MNIST Dataset and tested on the validation set from part B (using randomy initialized weights)
 
