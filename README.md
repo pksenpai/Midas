@@ -159,7 +159,7 @@ result: Epoch [1], last_lr: 0.00061, train_loss: 2.2782, val_loss: 3.8324, val_a
 
 Even with the issue with part C training and the custom MNIST dataset not training well in conjunction with original MNIST test set, the results do indicate that the pretrained architecture performs better ever so slightly.
 
-#### to compensate for the lack of markdown and experiment log, this readme and the following should serve that purpose:
+### to compensate for the lack of markdown and experiment log (due to lack of time because exams), this readme and the following should serve that purpose:
 
 #### general structure for all the notebooks:
 
