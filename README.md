@@ -76,3 +76,58 @@ the pretrained architecture performs relatively better than the one with randoml
 
 the pretrained architecture also gives better validation accuracy and loss.
 
+#### Note: Training for part C notebooks was problematic and I'm currently trying to fix the issue, which is probably caused by the difference in the Custom MNIST training set provied and original MNIST validation set, the results although, are still conclusive.
+
+#### Midas_C
+classifier trained on custom MNIST Dataset and tested on the validation set from part B (using pretrained architecture)
+
+transforms: resized to 32 x 32 x 3 converted to tensor and grayscaled to ouput 1 as third channel
+
+validation size = 3000, train size = default custom MNIST size
+
+batch size = 256,
+epochs = 5,
+max_lr = 0.001,
+grad_clip = 1,
+weight_decay = 1e-6,
+opt_func = torch.optim.Adam,
+
+result: Epoch [1], last_lr: 0.00095, train_loss: 2.3174, val_loss: 3.5638, val_acc: 0.0017
+
+#### Midas_C
+classifier trained on custom MNIST Dataset and tested on the validation set from part B (using pretrained architecture)
+
+transforms: resized to 32 x 32 x 3 converted to tensor and grayscaled to ouput 1 as third channel
+
+validation size = 3000, train size = default custom MNIST size
+
+batch size = 256,
+epochs = 5,
+max_lr = 0.001,
+grad_clip = 1,
+weight_decay = 1e-6,
+opt_func = torch.optim.Adam,
+
+result: Epoch [1], last_lr: 0.00095, train_loss: 2.3174, val_loss: 3.5638, val_acc: 0.0017
+
+#### Midas_C.1
+classifier trained on custom MNIST Dataset and tested on the validation set from part B (using randomy initialized weights)
+
+transforms: resized to 32 x 32 x 3 converted to tensor and grayscaled to ouput 1 as third channel
+
+validation size = 3000, train size = default custom MNIST size
+
+batch size = 256,
+epochs = 5,
+max_lr = 0.001,
+grad_clip = 1,
+weight_decay = 1e-6,
+opt_func = torch.optim.Adam,
+
+result: Epoch [1], last_lr: 0.00061, train_loss: 2.2782, val_loss: 3.8324, val_acc: 0.0003
+
+#### conclusion:
+
+Even with the issue with part C training and the custom MNIST dataset not training well in conjunction with original MNIST test set, the results do indicate that the pretrained architecture performs better ever so slightly.
+
+
