@@ -161,6 +161,19 @@ visualizing result
 
 ![7](https://user-images.githubusercontent.com/52780573/113301245-6fdc2d80-931c-11eb-8264-b762891acd96.png)
 
+#### References:
+
+PyTorch for DL tutorials on Jovian 
+
+---- http://yann.lecun.com/exdb/mnist/ (MNIST)
+
+#### Datasets:
+
+https://www.dropbox.com/s/pan6mutc5xj5kj0/trainPart1.zip
+
+https://www.dropbox.com/s/otc12z2w7f7xm8z/mnistTask3.zip?dl=0
+
+
 
 
 
