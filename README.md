@@ -1,6 +1,33 @@
 # Midas
 ### the notebooks and weights above are for task 2 of the midas internship program
 
+#### How to run: 
+#### I would recommend downloading and running these notebooks on colab along with the datasets provided but they can also be ran locally on a jupyter notebook and require the following libraries:
+>PyTorch
+>Matplotlib
+>tqdm
+
+#### to install those libraries, you'll need to run the following commands on the terminal:
+
+
+```python
+$ pip3 install tqdm
+```
+
+```python
+$ pip3 install matplotlib
+```
+CPU:
+
+```python
+$ pip3 install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+```
+CUDA(will vary depending on graphics card):
+
+```python
+$ pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.htm
+```
+
 #### Midas_A 
 classifier trained on a dataset of numbers and letters with 62 classes and 40 images per class
 
