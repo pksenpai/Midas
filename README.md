@@ -6,7 +6,7 @@ classifier trained on a dataset of numbers and letters with 62 classes and 40 im
 
 a residual convnet will be used for this and the remaining classifiers in this repository
 
-transforms: resized to 32 x 32 x 3 and converted to tensor
+transforms: resized to 32 x 32 x 3 and converted to tensor, doesn't really need any other kind of transformation
 
 validation size = 496, train size = 1984
 
@@ -76,7 +76,9 @@ the pretrained architecture performs relatively better than the one with randoml
 
 the pretrained architecture also gives better validation accuracy and loss.
 
-#### Note: Training for part C notebooks was problematic and I'm currently trying to fix the issue, which is probably caused by the difference in the Custom MNIST training set provied and original MNIST validation set, the results although, are still conclusive.
+#### Note 1: Training for part C notebooks was problematic and I'm currently trying to fix the issue, which is probably caused by the difference in the Custom MNIST training set provied and original MNIST validation set and the fact that a massive amount of images need to be greyscaled for training since the dataset provided isn't  w x h x 1 default but w x h x 3 , the results although, are still conclusive.
+
+#### Note 2: for every classifier using a custom dataset, it will have to be greyscaled and converted to one channel for comparison with original MNIST, which has one channel by default
 
 #### Midas_C
 classifier trained on custom MNIST Dataset and tested on the validation set from part B (using pretrained architecture)
@@ -126,8 +128,40 @@ opt_func = torch.optim.Adam,
 
 result: Epoch [1], last_lr: 0.00061, train_loss: 2.2782, val_loss: 3.8324, val_acc: 0.0003
 
-#### conclusion:
+#### Conclusion:
 
 Even with the issue with part C training and the custom MNIST dataset not training well in conjunction with original MNIST test set, the results do indicate that the pretrained architecture performs better ever so slightly.
+
+#### to compensate for the lack of markdown and experiment log, this readme and the following should serve that purpose:
+
+#### general structure for all the notebooks:
+
+
+importing libraries and applying transforms
+
+![1](https://user-images.githubusercontent.com/52780573/113301219-68b51f80-931c-11eb-8bd5-15782ea799c4.png)
+
+splitting data into training and validation dataset
+
+![2](https://user-images.githubusercontent.com/52780573/113301233-6ce13d00-931c-11eb-8853-8f3242377a4a.png)
+
+setting batch size and visualizing dataloader
+
+![3](https://user-images.githubusercontent.com/52780573/113301236-6d79d380-931c-11eb-9fb9-450c698cb7f5.png)
+
+constructing a convnet
+
+![4](https://user-images.githubusercontent.com/52780573/113301241-6eab0080-931c-11eb-8408-0710ea391deb.png)
+
+setting hyperparameters and training
+
+![5](https://user-images.githubusercontent.com/52780573/113301243-6f439700-931c-11eb-87b0-1710c5614483.png)
+
+visualizing result
+
+![7](https://user-images.githubusercontent.com/52780573/113301245-6fdc2d80-931c-11eb-8264-b762891acd96.png)
+
+
+
 
 
