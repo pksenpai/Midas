@@ -105,7 +105,7 @@ the pretrained architecture also gives better validation accuracy and loss.
 
 #### Note 1: Training for part C notebooks was problematic and I'm currently trying to fix the issue, which is probably caused by the difference in the Custom MNIST training set provied and original MNIST validation set and the fact that a massive amount of images need to be greyscaled for training since the dataset provided isn't  w x h x 1 default but w x h x 3 , the results although, are still conclusive.
 
-#### Note 2: for every classifier using a custom dataset, it will have to be greyscaled and converted to one channel for comparison with original MNIST, which has one channel by default
+#### Note 2: for every classifier using a custom dataset, it will have to be greyscaled and converted to one channel for comparison with original MNIST, which has one (third) channel by default
 
 #### Midas_C
 classifier trained on custom MNIST Dataset and tested on the validation set from part B (using pretrained architecture)
